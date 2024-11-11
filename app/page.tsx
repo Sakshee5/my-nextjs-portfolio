@@ -1,66 +1,39 @@
 import Image from "next/image";
-import { socialLinks } from "./config";
 
 export default function Page() {
   return (
-    <section>
-      <a href={socialLinks.twitter} target="_blank">
+    <section className="text-center">
+      {/* Profile Image */}
+      <div className="mb-6">
         <Image
-          src="/profile.png"
+          src="/profile.jpeg"
           alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+          className="rounded-full bg-gray-100 mx-auto"
           unoptimized
           width={160}
           height={160}
           priority
         />
-      </a>
+      </div>
 
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Portfolio, made simple!
-      </h1>
+      {/* Name and Title */}
+      <h2 className="text-xl font-medium text-gray-600 mb-4">
+        Graduate Student | Duke University
+      </h2>
 
-      <div className="prose prose-neutral dark:prose-invert">
+      {/* Program & Field */}
+      <h3 className="text-lg font-light text-gray-500 mb-8">
+        Artificial Intelligence
+      </h3>
+
+      {/* Profile Description */}
+      <div className="prose prose-neutral dark:prose-invert mx-auto">
+        <p>A builder at heart, passionate about transforming ideas into impactful realities.</p>
         <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS for optimal performance.
-        </p>
-        <p>
-          Nextfolio includes all the essentials for a stunning portfolio: SEO,
-          MDX support, RSS, Atom, & JSON feeds, analytics, tweet & YouTube
-          embeds, KaTeX integration, and{" "}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
-        </p>
-        <p>
-          Nextfolio is{" "}
-          <a href={socialLinks.github} target="_blank">
-            open-source
-          </a>{" "}
-          and fully customizable, making it easy to add more features.
-        </p>
-        <p>
-          <a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-          >
-            Deploy
-          </a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
+          Hey! I’m <strong>Sakshee</strong>, an AI Engineer with 2+ years building Generative AI solutions at Deloitte, specializing in multi-agent LLM systems and RAG. Currently pursuing my master’s in{" "}
+          <a href="https://ai.meng.duke.edu/degree" target="_blank" className="text-blue-600 hover:underline">
+            AI
+          </a> at Duke, with a focus on xAI for interpretable systems.
         </p>
       </div>
     </section>
