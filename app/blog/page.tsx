@@ -19,10 +19,10 @@ export default function PortfolioTimeline() {
           {item.date}
         </div>
 
-        {/* Timeline Dot */}
+        {/* Timeline Dot
         <div className="relative flex-shrink-0">
           <div className="w-3 h-3 mt-2 bg-neutral-500 rounded-full border border-white dark:border-neutral-900"></div>
-        </div>
+        </div> */}
 
         {/* Content */}
         <div className="ml-5">

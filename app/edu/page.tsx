@@ -53,18 +53,17 @@ const timelineItems = [
     title: "M.Eng - Artificial Intelligence, Duke University",
     subtitle: "GPA: 4.0, Relevant coursework: Explainable AI, Modeling Process & Algorithms, Deep Learning, LLMs",
     date: "Aug 2024 - Dec 2025",
-    link: "",
+    link: "https://masters.pratt.duke.edu/ai/",
     details: [
       "Research Assistant for CREATE: Center for Research & Engineering of AI Technology in Education",
-      "Won the “First Grand Prize” and “Best Use of Agents” special prize in the DukeAI Hackathon amongst 500+ participants.",
-      "Built Inception-Swarm, a multi-agent system capable of building multi-agent systems based on natural language prompts.",
+      "Won the “First Grand Prize” and “Best Use of Agents” special prize in the DukeAI Hackathon amongst 500+ participants. Built Inception-Swarm, a multi-agent system capable of building multi-agent systems based on natural language prompts.",
     ]
   },
   {
     title: "B.Tech - Mechanical Engineering, Indian Institute of Technology Indore",
     subtitle: "GPA: 3.47, Relevant coursework: Calculus, Linear Algebra and ODE’s, Numerical Methods, Computer Programming",
     date: "Aug 2018 - Aug 2022",
-    link: "",
+    link: "https://www.iiti.ac.in/",
     details: [
       "Won silver medal in Inter-IIT Technical Meet, 2021: Led a 10-member team as part of the AI-ML Club.",
       "Published a book chapter titled “Deep learning-based methods for detecting surface defects in steel plates” in Elsevier.",

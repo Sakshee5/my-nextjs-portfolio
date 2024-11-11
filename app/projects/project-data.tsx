@@ -1,58 +1,121 @@
+// project-data.ts
 export interface Project {
   title: string;
   year: number;
-  description: string;
+  description?: string;
+  image: string;
   url: string;
+  bulletPoints: string[];
+  tags: string[];
 }
 
 export const projects: Project[] = [
   {
+    title: "Art Meets AI: Neural Style Transfer with Interactive Visualizations",
+    year: 2024,
+    image: "/projects/style-transfer.png",
+    url: "https://github.com/Sakshee5",
+    bulletPoints: [
+      "Built and deployed a web application that visualizes Neural Style Transfer (NST) in real-time.",
+      "Allows users to blend content and style images by adjusting parameters like content/style weights.",
+      "Enhanced interpretability with XAI techniques like saliency maps and Grad-CAM."
+    ],
+    tags: ["XAI", "Neural Style Transfer", "Web Application", "Interactive Visualization"]
+  },
+  {
+    title: "Alphanumeric Audio Dataset Collection",
+    year: 2024,
+    image: "/projects/dataset-collection.png",
+    url: "https://github.com/Sakshee5/Alphanumeric-Audio-Dataset",
+    bulletPoints: [
+      "Completed data collection process from IRB approval to open-source release.",
+      "Collected over 500 audio samples along with demographic metadata.",
+      "Ensured ethical standards with anonymization and open-sourced the dataset to promote inclusivity."
+    ],
+    tags: ["Speech Recognition", "Dataset Collection", "AI Fairness", "Open Source"]
+  },
+  {
     title: "Unsupervised Segmentation of Peck-damaged Rice Grains",
     year: 2022,
-    description:
-      "Guide: Dr. Pavan Kankar, Dr. Ankur Miglani | B.Tech Thesis\nEarned highest grade for conducting research in a field with limited existing literature, utilizing a novel dataset.\nDeveloped an unsupervised Convolutional Neural Network (CNN) based segmentation algorithm for the sub-classification of pecky-damaged rice grains, achieving a 92.54 Dice coefficient accuracy.",
+    image: "/projects/rice-grain.png",
     url: "https://github.com/Sakshee5/Rice-Grain-Quality-Inspection-/tree/main",
+    bulletPoints: [
+      "Developed an unsupervised CNN-based segmentation algorithm.",
+      "Achieved 92.54 Dice coefficient accuracy in segmenting peck-damaged rice grains.",
+      "Earned the highest grade for conducting research in a novel field."
+    ],
+    tags: ["Image Segmentation", "CNN", "Agriculture", "Research"]
   },
   {
     title: "Design and Vision-based Control of Miniature Rolling Capsule",
     year: 2021,
-    description:
-      "Guide: Dr. Debanik Roy, Dr. Pavan Kankar, Dr. Ankur Miglani\nDesigned & 3D printed a CAD model of a miniature rolling capsule fitted with a CCD camera for pipe inspection.\nDeveloped a modified U-net architecture for detecting the type, spread, and severity of defects on steel surfaces, achieving an accuracy 2% higher than the baseline results on the dataset.",
+    image: "/projects/steel-defect.png",
     url: "https://github.com/Sakshee5/Steel-Defect-Detection",
+    bulletPoints: [
+      "Designed a miniature rolling capsule with a CCD camera for pipe inspection.",
+      "Developed a U-net model for detecting defects on steel surfaces with high accuracy.",
+      "Achieved a 2% improvement over baseline results on steel defect detection dataset."
+    ],
+    tags: ["Computer Vision", "Robotics", "Pipe Inspection", "U-net"]
   },
   {
     title: "Prognostics and Health Management - Data Challenge",
     year: 2021,
-    description:
-      "Worked on predicting Remaining Useful Life in a fleet of aircraft engines with multiple failure modes.\nUsed ragged tensors for input data of varying lengths and trained it on CNN as well as RNN-based models.\nLearned the basics of LSTMs, GRUs, Bi-directional LSTMs, and Attention Models for time series prediction.",
+    image: "/projects/time-series.jpg",
     url: "https://github.com/Sakshee5/PHM--RUL-Prediction-Challenge",
+    bulletPoints: [
+      "Predicted Remaining Useful Life (RUL) in a fleet of aircraft engines with multiple failure modes.",
+      "Used ragged tensors with CNN and RNN-based models for time series prediction.",
+      "Learned LSTMs, GRUs, Bi-directional LSTMs, and Attention models for time series data."
+    ],
+    tags: ["PHM", "Time Series", "RNN", "Aerospace"]
   },
   {
     title: "Bosch’s Traffic Sign Recognition | Inter IIT",
     year: 2021,
-    description:
-      "Worked on the ML team with UI designers to develop the backend of a customizable CNN architecture.\nExplored various metrics to develop a baseline model for the GTSRB traffic sign dataset with 43 classes.\nLearned about data augmentation, new CNN layers/hyperparameters, and UI design/deployment.",
+    image: "/projects/traffic-sign.jpg",
     url: "https://github.com/Sakshee5/traffic_sign_recognition",
+    bulletPoints: [
+      "Developed the backend of a customizable CNN architecture for traffic sign recognition.",
+      "Built baseline model for GTSRB dataset with 43 traffic sign classes.",
+      "Learned data augmentation, CNN layers, hyperparameters, and UI design."
+    ],
+    tags: ["Traffic Sign Recognition", "CNN", "Computer Vision", "Inter IIT"]
   },
   {
     title: "Heart Rate Estimation from Non-contact Face Videos Using Deep Learning",
     year: 2020,
-    description:
-      "Guide: Dr. Puneet Gupta | CSE-IIT Indore\nWorked on extracting facial landmarks and temporal signals from non-contact facial videos to differentiate between authentic and spoof (DeepFake) videos.\nLearned about the OpenFace library, facial landmarks, and the basics of coding in MATLAB.",
-    url: "",
+    image: "/projects/deep-learning.png",
+    url: "https://github.com/Sakshee5",
+    bulletPoints: [
+      "Extracted facial landmarks and temporal signals to differentiate between authentic and spoof videos.",
+      "Used OpenFace library and learned basics of MATLAB.",
+      "Worked with non-contact face video data for heart rate estimation."
+    ],
+    tags: ["Deep Learning", "Healthcare", "Facial Recognition", "MATLAB"]
   },
   {
     title: "OpenCV Self Projects",
     year: 2020,
-    description:
-      "Real-time attendance monitoring with face detection.\nVirtual painting with Webcam, Document Scanner.\nAugmented Reality with orb feature matching, homography, and Aruco Markers.",
+    image: "/projects/cv.jpeg",
     url: "https://github.com/Sakshee5",
+    bulletPoints: [
+      "Real-time attendance monitoring with face detection.",
+      "Virtual painting with webcam and document scanner.",
+      "Augmented reality with ORB feature matching and Aruco markers."
+    ],
+    tags: ["OpenCV", "Augmented Reality", "Face Detection", "Computer Vision"]
   },
   {
     title: "Renewable Energy Forecasting for a Smart Grid | Smart India Hackathon",
     year: 2020,
-    description:
-      "Worked in a team of five to develop a scheduling system for a simulated microgrid controller.\nDeveloped a multivariate time-series forecasting model to predict renewable energy generation.\nLearned about Recurrent Neural Networks and got acquainted with convex optimization algorithms.",
+    image: "/projects/sih.png",
     url: "https://github.com/Sakshee5/Renewable-Energy-Forecasting-for-Integrated-Smart-Grid",
-  },
+    bulletPoints: [
+      "Developed a scheduling system for a simulated microgrid controller.",
+      "Built a multivariate time-series forecasting model for renewable energy prediction.",
+      "Gained experience with RNNs and convex optimization algorithms."
+    ],
+    tags: ["Renewable Energy", "Smart Grid", "Time Series", "Hackathon"]
+  }
 ];
