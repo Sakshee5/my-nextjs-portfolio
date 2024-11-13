@@ -12,4 +12,4 @@ This portfolio was created using a template available on the main branch. Specia
 
 ## Branch Information
 
-The main portfolio is currently on the `main-portfolio` branch. The template remains on the `main` branch for reference.
+The main portfolio is currently on the `main` branch. The original template is on the `template` branch for reference.
