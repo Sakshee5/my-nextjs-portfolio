@@ -90,9 +90,9 @@ html {
   @apply font-medium;
 } */
 
-/* .prose img {
+.prose img {
   /* Don't apply styles to next/image */
-  /* @apply m-0;
+  @apply m-0;
 }
 
 .prose h2,
