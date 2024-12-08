@@ -70,7 +70,7 @@ html {
 
 .prose *:hover > .anchor {
   @apply visible;
-} */
+}
 
 .prose pre {
   @apply bg-[#F7F7F7] dark:bg-[#181818] rounded-lg overflow-x-auto;
@@ -88,11 +88,11 @@ html {
 
 .prose code span {
   @apply font-medium;
-} */
+}
 
 .prose img {
   /* Don't apply styles to next/image */
-  @apply m-0;
+  /* /* @apply m-0; */
 }
 
 .prose h2,
