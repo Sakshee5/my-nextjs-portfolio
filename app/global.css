@@ -35,10 +35,10 @@
 }
 
 html {
-  min-width: 360px;
+  min-width: 500px;
 }
 
-.prose {
+/* .prose {
   @apply text-[#333333] dark:text-[#D4D4D4];
 }
 
@@ -70,9 +70,9 @@ html {
 
 .prose *:hover > .anchor {
   @apply visible;
-}
+} */
 
-.prose pre {
+/* .prose pre {
   @apply bg-[#F7F7F7] dark:bg-[#181818] rounded-lg overflow-x-auto;
 }
 
@@ -88,11 +88,11 @@ html {
 
 .prose code span {
   @apply font-medium;
-}
+} */
 
-.prose img {
+/* .prose img {
   /* Don't apply styles to next/image */
-  @apply m-0;
+  /* @apply m-0;
 }
 
 .prose h2,
@@ -105,7 +105,7 @@ h6 {
 
 .prose strong {
   @apply font-medium;
-}
+} */ */
 
 .prose > :first-child {
   /* Override removing top margin, causing layout shift */

@@ -55,6 +55,7 @@ const timelineItems = [
     date: "Aug 2024 - Dec 2025",
     link: "https://masters.pratt.duke.edu/ai/",
     details: [
+      "GPA: 4.0, Relevant coursework: Explainable AI, Modeling Process & Algorithms, Deep Learning, LLMs",
       "Research Assistant for CREATE: Center for Research & Engineering of AI Technology in Education",
       "Won the “First Grand Prize” and “Best Use of Agents” special prize in the DukeAI Hackathon amongst 500+ participants. Built Inception-Swarm, a multi-agent system capable of building multi-agent systems based on natural language prompts.",
     ]

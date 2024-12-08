@@ -14,11 +14,10 @@ export const projects: Project[] = [
     title: "Art Meets AI: Neural Style Transfer with Interactive Visualizations",
     year: 2024,
     image: "/projects/style-transfer.png",
-    url: "https://github.com/Sakshee5",
+    url: "https://github.com/Sakshee5/XAI-style-transfer",
     bulletPoints: [
       "Built and deployed a web application that visualizes Neural Style Transfer (NST) in real-time.",
-      "Allows users to blend content and style images by adjusting parameters like content/style weights.",
-      "Enhanced interpretability with XAI techniques like saliency maps and Grad-CAM."
+      "Enhanced interpretability by integrating explainability techniques (XAI) like Feature maps, Gram-matrix and Grad-CAM visualization.",
     ],
     tags: ["XAI", "Neural Style Transfer", "Web Application", "Interactive Visualization"]
   },
@@ -26,9 +25,9 @@ export const projects: Project[] = [
     title: "Alphanumeric Audio Dataset Collection",
     year: 2024,
     image: "/projects/dataset-collection.png",
-    url: "https://github.com/Sakshee5/Alphanumeric-Audio-Dataset",
+    url: "https://huggingface.co/datasets/sakshee05/alphanumeric-audio-dataset",
     bulletPoints: [
-      "Completed data collection process from IRB approval to open-source release.",
+      "Completed data collection process from IRB approval to open-source release on HuggingFace.",
       "Collected over 500 audio samples along with demographic metadata.",
       "Ensured ethical standards with anonymization and open-sourced the dataset to promote inclusivity."
     ],

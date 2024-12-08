@@ -4,14 +4,14 @@ export default function Page() {
   return (
     <section className="text-center">
       {/* Profile Image */}
-      <div className="mb-3">
+      <div className="mb-3 -mt-8">
         <Image
           src="/profile.jpeg"
           alt="Profile photo"
           className="rounded-full bg-gray-100 mx-auto"
           unoptimized
-          width={160}
-          height={160}
+          width={240}
+          height={200}
           priority
         />
       </div>

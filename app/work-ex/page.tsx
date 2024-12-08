@@ -9,43 +9,47 @@ export const metadata = {
 export default function PortfolioTimeline() {
   return (
     <section className="py-12 px-6 bg-neutral-50 dark:bg-neutral-900">
-      <h1 className="text-3xl font-bold text-center text-neutral-800 dark:text-neutral-100 mb-8">
-        Work Experience
-      </h1>
-      <div className="relative border-l-4 border-neutral-400 dark:border-neutral-600 mx-auto max-w-2xl pl-13">
-        {timelineItems.map((item, index) => (
-          <div key={index} className="mb-12 flex items-start relative">
-            {/* Date */}
-            <div className="absolute -left-28 w-24 text-right mt-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-              {item.date}
-            </div>
+  <h1 className="text-3xl font-bold text-center text-neutral-800 dark:text-neutral-100 mb-8">
+    Work Experience
+  </h1>
+  <div className="relative mx-auto max-w-2xl flex">
+    {/* Timeline Line */}
+    <div className="relative border-l-4 border-neutral-400 dark:border-neutral-600" style={{ marginLeft: "40px" }}>
+      {/* Invisible spacer for alignment */}
+    </div>
 
-            {/* Timeline Dot
-            <div className="relative flex-shrink-0">
-              <div className="w-4 h-4 mt-2 bg-neutral-500 rounded-full border-2 border-white dark:border-neutral-800"></div>
-            </div> */}
-
-            {/* Content */}
-            <div className="ml-6 space-y-2">
-              <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 hover:text-blue-600 dark:hover:text-blue-400">
-                <Link href={item.link}>{item.title}</Link>
-              </h2>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                {item.subtitle}
-              </p>
-              {/* Additional points */}
-              {item.details && (
-                <ul className="list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300 space-y-1">
-                  {item.details.map((detail, idx) => (
-                    <li key={idx}>{detail}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
+    {/* Timeline Content */}
+    <div className="pl-0">
+      {timelineItems.map((item, index) => (
+        <div key={index} className="mb-12 flex items-start relative">
+          {/* Date */}
+          <div className="absolute -left-28 w-24 text-right mt-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            {item.date}
           </div>
-        ))}
-      </div>
-    </section>
+
+          {/* Content */}
+          <div className="ml-6 space-y-2">
+            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 hover:text-blue-600 dark:hover:text-blue-400">
+              <Link href={item.link}>{item.title}</Link>
+            </h2>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              {item.subtitle}
+            </p>
+            {/* Additional points */}
+            {item.details && (
+              <ul className="list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300 space-y-1">
+                {item.details.map((detail, idx) => (
+                  <li key={idx}>{detail}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 }
 

@@ -7,8 +7,8 @@ export const metadata = {
 
 export default function PortfolioTimeline() {
   return (
-    <section>
-  <div className="relative border-l-2 border-neutral-300 dark:border-neutral-700 ml-20 pl-15">
+    <section className="py-12 px-6 bg-neutral-50 dark:bg-neutral-900">
+   <div className="relative border-l-2 border-neutral-300 dark:border-neutral-700 ml-20 pl-15">
     {timelineItems.map((item, index) => (
       <div
         key={index}
@@ -49,8 +49,16 @@ export default function PortfolioTimeline() {
 
 const timelineItems = [
   {
+    title: "POV: My First Week exploring Mechanistic Interpretability",
+    subtitle: "Interpreting Attention Patterns, Ablation, Residual Streams using TransformerLens, and what I learned along the way",
+    extra: "Medium publication by Sakshee Patil",
+    date: "Nov 2024",
+    link: "https://medium.com/@saksheepatil05/pov-my-first-week-exploring-mechanistic-interpretability-f1d3e4a6f01a",
+  },
+  {
     title: "Cracking the Code: How Adversarial Attacks Manipulate AI Language Models",
-    subtitle: "Medium publication by Sakshee Patil",
+    subtitle: "Paper Overview: Adversarial Attacks and Defenses in Large Language Models: Old and New Threats",
+    extra: "Medium publication by Sakshee Patil",
     date: "Sept 2024",
     link: "https://saksheepatil05.medium.com/cracking-the-code-how-adversarial-attacks-manipulate-ai-language-models-239620395e58",
   },
