@@ -8,47 +8,44 @@ export const metadata = {
 export default function PortfolioTimeline() {
   return (
     <section className="py-12 px-6 bg-neutral-50 dark:bg-neutral-900">
-  <h1 className="text-3xl font-bold text-center text-neutral-800 dark:text-neutral-100 mb-8">
-    Education
-  </h1>
-  <div className="relative mx-auto max-w-2xl flex">
-    {/* Timeline Line */}
-    <div className="relative border-l-4 border-neutral-400 dark:border-neutral-600" style={{ marginLeft: "40px" }}>
-      {/* Invisible spacer for alignment */}
-    </div>
+      <h1 className="text-3xl font-bold text-center text-neutral-800 dark:text-neutral-100 mb-8">
+        Education
+      </h1>
+      <div className="relative mx-auto max-w-2xl flex">
+        {/* Timeline Line */}
+        <div className="relative border-l-4 border-neutral-400 dark:border-neutral-600" style={{ marginLeft: "40px" }}></div>
 
-    {/* Timeline Content */}
-    <div className="pl-0">
-      {timelineItems.map((item, index) => (
-        <div key={index} className="mb-12 flex items-start relative">
-          {/* Date */}
-          <div className="absolute -left-28 w-24 text-right mt-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            {item.date}
-          </div>
+        {/* Timeline Content */}
+        <div className="pl-0">
+          {timelineItems.map((item, index) => (
+            <div key={index} className="mb-12 flex items-start relative">
+              {/* Date */}
+              <div className="absolute -left-28 w-24 text-right mt-1 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+                {item.date}
+              </div>
 
-          {/* Content */}
-          <div className="ml-6 space-y-2">
-            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 hover:text-blue-600 dark:hover:text-blue-400">
-              <Link href={item.link}>{item.title}</Link>
-            </h2>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              {item.subtitle}
-            </p>
-            {/* Additional points */}
-            {item.details && (
-              <ul className="list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300 space-y-1">
-                {item.details.map((detail, idx) => (
-                  <li key={idx}>{detail}</li>
-                ))}
-              </ul>
-            )}
-          </div>
+              {/* Content */}
+              <div className="ml-6 space-y-2">
+                <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 hover:text-blue-600 dark:hover:text-blue-400">
+                  <Link href={item.link}>{item.title}</Link>
+                </h2>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  {item.subtitle}
+                </p>
+                {/* Additional points */}
+                {item.details && (
+                  <ul className="list-disc pl-5 text-sm text-neutral-700 dark:text-neutral-300 space-y-1">
+                    {item.details.map((detail, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: detail }} />
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </div>
+    </section>
   );
 }
 
@@ -60,8 +57,9 @@ const timelineItems = [
     link: "https://masters.pratt.duke.edu/ai/",
     details: [
       "GPA: 4.0, Relevant coursework: Explainable AI, Modeling Process & Algorithms, Deep Learning, LLMs",
-      "Research Assistant for CREATE: Center for Research & Engineering of AI Technology in Education",
+      "Research Assistant for CREATE: Center for Research & Engineering of AI Technology in Education. Building Classwise2.0: An AI powered platform used by Duke professors and students as a companion for learning and tracking progress through AI-generated quizzes, evaluation, and feedback.",
       "Won the “First Grand Prize” and “Best Use of Agents” special prize in the DukeAI Hackathon amongst 500+ participants. Built Inception-Swarm, a multi-agent system capable of building multi-agent systems based on natural language prompts.",
+      'Published articles and code demos on XAI topics such as <a href="https://saksheepatil05.medium.com" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 500;">Adversarial Attacks on LLMs</a> and <a href="https://saksheepatil05.medium.com/pov-my-first-week-exploring-mechanistic-interpretability-f1d3e4a6f01a" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 500;">Mechanistic Interpretability</a>.'
     ]
   },
   {

@@ -11,6 +11,46 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    "title": "Swarm Builder: An multi-agent system to build new systems.",
+    "year": 2024,
+    "image": "/projects/swarm_builder.png",
+    "url": "https://github.com/Sakshee5/swarm-builder",
+    "bulletPoints": [
+      "Developed an AI-powered framework that dynamically generates OpenAI Swarms based on user prompts.",
+      "Enables rapid prototyping of multi-agent systems, reducing setup time from hours to minutes.",
+      "Includes a Streamlit interface supporting text and audio input for seamless swarm creation.",
+      "Prebuilt examples include Bitcoin analysis, Twitch streamer tracking, Twitter discussion summarization, and more.",
+      "Automates 90% of the swarm setup, requiring minimal user customization."
+    ],
+    "tags": ["AI Agents", "Multi-Agent Systems", "OpenAI Swarm", "Automation", "Streamlit"]
+  },  
+  {
+    title: "Splashh: Multiplayer Drawing Game with Hand Tracking",
+    year: 2024,
+    image: "/projects/splashh.png",
+    url: "https://github.com/Sakshee5/Multiplayer-Virtual-Painting-Game",
+    bulletPoints: [
+      "Developed a real-time multiplayer drawing game using WebSockets, OpenCV, and Python.",
+      "Implemented webcam-based hand tracking for gesture-controlled drawing and power-ups.",
+      "Designed interactive gameplay with a shared canvas, unique power-ups, and score tracking.",
+      "Enhances virtual engagement by enabling creative, gesture-based multiplayer interaction."
+    ],
+    tags: ["Computer Vision", "Multiplayer", "WebSockets", "Game Development"]
+  },  
+  {
+    title: "Video Game Assistant: RAG",
+    year: 2024,
+    image: "/projects/game-assistant.png",
+    url: "https://github.com/Sakshee5/Video-Games-Assist-RAG",
+    bulletPoints: [
+      "Built a RAG based search tool with ChromaDB that retrieves and summarizes game solutions from the internet in real-time (YouTube, Reddit, and web guides).",
+      "Extracts key timestamps from YouTube videos and provides direct sources when scraping is restricted.",
+      "Helps gamers save time by instantly finding the best strategies, walkthroughs, and hidden details without endless searching."
+    ],
+    tags: ["RAG", "Web Scraping", "AI Assistant", "Gaming"]
+  },
+
+  {
     title: "Art Meets AI: Neural Style Transfer with Interactive Visualizations",
     year: 2024,
     image: "/projects/style-transfer.png",

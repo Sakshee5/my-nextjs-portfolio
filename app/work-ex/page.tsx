@@ -54,8 +54,31 @@ export default function PortfolioTimeline() {
 
 const timelineItems = [
   {
+    title: "ML Engineer",
+    subtitle: "Fashivly, US : Part-time",
+    date: "Dec 2024 - Present",
+    details: [
+      "Collaborating with Fashivly, a fashion-tech company, to enhance their Look Builder feature by integrating accessory segmentation into the existing image processing pipeline.",
+      "Designed and tested various workflows, ultimately selecting LangSAM (with fallback to SAM) for more robust accessory segmentation.",
+      "Deployed a CPU version of LangSAM on Hugging Face Spaces, with plans to migrate to AWS EC2 for GPU acceleration.",
+   ],
+    link: ""
+  },
+  {
+    title: "Research Assistant",
+    subtitle: "Center for Research & Engineering of AI Technology in Education, Duke University : Part-time",
+    date: "Dec 2024 - Present",
+    details: [
+      "Building Classwise2.0: An AI powered platform used by Duke professors and students as a companion for learning and tracking progress through quizzes, evaluation, & feedback.",
+      "Setting up a full-stack architecture using React, Bootstrap, Node.js (Express), and MongoDB, improving scalability and user experience.",
+      "Leading the development of GenAI-powered features, including adaptive question generation and intelligent feedback mechanisms.",
+      "Expanding functionality by integrating new features, refining UI/UX, and optimizing database performance while learning and applying full-stack best practices."
+    ],
+    link: "https://sites.duke.edu/createcenter/"
+  },
+  {
     title: "AI Analyst - Generative AI Solutioning",
-    subtitle: "Deloitte, Mumbai, MH, India",
+    subtitle: "Deloitte, Mumbai, MH, India : Full-time",
     date: "Aug 2022 - Aug 2024",
     details: [
       "Prototyped and tested an end-to-end multi-agent LLM system utilizing OpenAI’s Assistants API within a 10-person team, enabling autonomous web research, analysis, and deliverable generation (newsletters, reports, presentations). Generated 100+ first draft deliverables during the testing phase.",
@@ -77,7 +100,7 @@ const timelineItems = [
   },
   {
     title: "Coding Tutor",
-    subtitle: "Tynker (BYJUs), India",
+    subtitle: "Tynker (BYJUs), India : Part-time",
     date: "Oct 2020 - Nov 2021",
     details: [
       "Conducted live personalized virtual mentoring sessions for students in India and overseas.",
