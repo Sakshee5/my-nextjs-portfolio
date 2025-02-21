@@ -59,7 +59,7 @@ const timelineItems = [
       "GPA: 4.0, Relevant coursework: Explainable AI, Modeling Process & Algorithms, Deep Learning, LLMs",
       "Research Assistant for CREATE: Center for Research & Engineering of AI Technology in Education. Building Classwise2.0: An AI powered platform used by Duke professors and students as a companion for learning and tracking progress through AI-generated quizzes, evaluation, and feedback.",
       "Won the “First Grand Prize” and “Best Use of Agents” special prize in the DukeAI Hackathon amongst 500+ participants. Built Inception-Swarm, a multi-agent system capable of building multi-agent systems based on natural language prompts.",
-      'Published articles and code demos on XAI topics such as <a href="https://saksheepatil05.medium.com" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 500;">Adversarial Attacks on LLMs</a> and <a href="https://saksheepatil05.medium.com/pov-my-first-week-exploring-mechanistic-interpretability-f1d3e4a6f01a" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 500;">Mechanistic Interpretability</a>.'
+      'Published articles and code demos on XAI topics such as <a href="https://saksheepatil05.medium.com/cracking-the-code-how-adversarial-attacks-manipulate-ai-language-models-239620395e58" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 500;">Adversarial Attacks on LLMs</a> and <a href="https://saksheepatil05.medium.com/pov-my-first-week-exploring-mechanistic-interpretability-f1d3e4a6f01a" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 500;">Mechanistic Interpretability</a>.'
     ]
   },
   {

@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     "title": "Swarm Builder: An multi-agent system to build new systems.",
-    "year": 2024,
+    "year": 2025,
     "image": "/projects/swarm_builder.png",
     "url": "https://github.com/Sakshee5/swarm-builder",
     "bulletPoints": [
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   },  
   {
     title: "Splashh: Multiplayer Drawing Game with Hand Tracking",
-    year: 2024,
+    year: 2025,
     image: "/projects/splashh.png",
     url: "https://github.com/Sakshee5/Multiplayer-Virtual-Painting-Game",
     bulletPoints: [
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },  
   {
     title: "Video Game Assistant: RAG",
-    year: 2024,
+    year: 2025,
     image: "/projects/game-assistant.png",
     url: "https://github.com/Sakshee5/Video-Games-Assist-RAG",
     bulletPoints: [

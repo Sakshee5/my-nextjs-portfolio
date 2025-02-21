@@ -56,7 +56,7 @@ const timelineItems = [
   {
     title: "ML Engineer",
     subtitle: "Fashivly, US : Part-time",
-    date: "Dec 2024 - Present",
+    date: "Jan 2025 - Present",
     details: [
       "Collaborating with Fashivly, a fashion-tech company, to enhance their Look Builder feature by integrating accessory segmentation into the existing image processing pipeline.",
       "Designed and tested various workflows, ultimately selecting LangSAM (with fallback to SAM) for more robust accessory segmentation.",

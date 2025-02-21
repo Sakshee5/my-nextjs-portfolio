@@ -49,11 +49,18 @@ export default function PortfolioTimeline() {
 
 const timelineItems = [
   {
+    title: "Are Current State-of-the-Art (SOTA) LLMs Intelligent?",
+    subtitle: "A thought piece…",
+    extra: "Medium publication by Sakshee Patil",
+    date: "Jan 2025",
+    link: "https://saksheepatil05.medium.com/are-current-state-of-the-art-sota-llms-intelligent-5db2cdc95b0b",
+  },
+  {
     title: "POV: My First Week exploring Mechanistic Interpretability",
     subtitle: "Interpreting Attention Patterns, Ablation, Residual Streams using TransformerLens, and what I learned along the way",
     extra: "Medium publication by Sakshee Patil",
     date: "Nov 2024",
-    link: "https://medium.com/@saksheepatil05/pov-my-first-week-exploring-mechanistic-interpretability-f1d3e4a6f01a",
+    link: "https://saksheepatil05.medium.com/pov-my-first-week-exploring-mechanistic-interpretability-f1d3e4a6f01a",
   },
   {
     title: "Cracking the Code: How Adversarial Attacks Manipulate AI Language Models",
