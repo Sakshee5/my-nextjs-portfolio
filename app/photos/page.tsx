@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { ImageGrid } from "app/components/image-grid";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Photos",
@@ -9,79 +9,53 @@ export const metadata: Metadata = {
 
 export default function Photos() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">Photos</h1>
-      <ImageGrid
-        columns={3}
-        images={[
-          {
-            src: "/photos/photo1.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo2.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo3.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo4.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo5.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo6.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo7.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo8.jpg",
-            alt: "",
-            href: "",
-          },
-          {
-            src: "/photos/photo9.jpg",
-            alt: "",
-            href: "",
-          },
-        ]}
-      />
+    <section className="space-y-12">
+      <h1 className="text-2xl font-medium tracking-tight">Photos</h1>
+      
+      {/* First Grid - 3 columns */}
+      <div className="photo-grid columns-3">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+          <div key={num} className="photo-item">
+            <Image
+              src={`/photos/photo${num}.jpg`}
+              alt={`Photo ${num}`}
+              width={400}
+              height={400}
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
 
-      <ImageGrid
-        columns={2}
-        images={[
-          { src: "/photos/photo1.jpg", alt: "" },
-          { src: "/photos/photo2.jpg", alt: "" },
-          { src: "/photos/photo3.jpg", alt: "" },
-          { src: "/photos/photo4.jpg", alt: "" },
-        ]}
-      />
+      {/* Second Grid - 2 columns */}
+      <div className="photo-grid columns-2">
+        {[1, 2, 3, 4].map((num) => (
+          <div key={num} className="photo-item">
+            <Image
+              src={`/photos/photo${num}.jpg`}
+              alt={`Photo ${num}`}
+              width={600}
+              height={600}
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
 
-      <ImageGrid
-        columns={4}
-        images={[
-          { src: "/photos/photo5.jpg", alt: "" },
-          { src: "/photos/photo6.jpg", alt: "" },
-          { src: "/photos/photo7.jpg", alt: "" },
-          { src: "/photos/photo8.jpg", alt: "" },
-          { src: "/photos/photo9.jpg", alt: "" },
-        ]}
-      />
+      {/* Third Grid - 4 columns */}
+      <div className="photo-grid columns-4">
+        {[5, 6, 7, 8, 9].map((num) => (
+          <div key={num} className="photo-item">
+            <Image
+              src={`/photos/photo${num}.jpg`}
+              alt={`Photo ${num}`}
+              width={300}
+              height={300}
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

@@ -55,12 +55,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
       <body>
-        <div className="min-h-screen flex flex-col">
-          <div className="w-full max-w-[1200px] mx-auto px-4">
+        <div className="h-screen flex flex-col">
+          <div className="w-full max-w-[900px] mx-auto px-4 flex flex-col h-full">
             <header className="py-4">
               <Navbar />
             </header>
-            <main className="flex-grow flex items-center justify-center py-12">
+            <main className="flex-grow flex items-center justify-center">
               {children}
             </main>
             <footer className="py-4">

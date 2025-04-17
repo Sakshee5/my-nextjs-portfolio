@@ -53,6 +53,7 @@ body {
   background: var(--bg-button);
   border: 1px solid transparent;
   font-weight: 500;
+  backdrop-filter: blur(8px);
 }
 
 .nav-link:hover {
@@ -68,6 +69,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 500;
 }
 
 /* Image Container */
@@ -93,29 +95,37 @@ body {
 /* Logo Grid */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  width: fit-content;
+  grid-template-columns: minmax(auto, 0.8fr) minmax(auto, 1.5fr);
+  gap: 1rem;
+  width: 100%;
 }
 
 .logo-section {
   display: flex;
-  gap: 1.5rem;
-  padding: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
   background: var(--bg-button);
   border-radius: 12px;
   align-items: center;
 }
 
+.logo-section-title {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
 .logo-item {
   position: relative;
   width: 40px;
-  height: 40px;
   opacity: 0.85;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: contain;
 }
 
 .logo-item img {
@@ -148,14 +158,110 @@ a:hover {
   }
   
   h2 {
-    font-size: 1.25rem;
-  }
-  
-  h3 {
     font-size: 1rem;
   }
   
-  p {
-    font-size: 0.9375rem;
+  h3 {
+    font-size: 0.85rem;
   }
+  
+  p {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+}
+
+/* Tooltip Styles */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--text-primary);
+  color: var(--bg-card);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 10;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip-container:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Image Container with Tooltip */
+.image-container::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background: var(--text-primary);
+  color: var(--bg-card);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 10;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 300px;
+  white-space: normal;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Photo Grid Styles */
+.photo-grid {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.photo-grid.columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.photo-grid.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-grid.columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.photo-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
 } 
