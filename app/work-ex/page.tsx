@@ -80,10 +80,10 @@ const timelineItems = [
     subtitle: "Center for Research & Engineering of AI Technology in Education, Duke University : Part-time",
     date: "Dec 2024 - Present",
     details: [
-      "Building Classwise2.0: An AI powered platform used by Duke professors and students as a companion for learning and tracking progress through quizzes, evaluation, & feedback.",
-      "Setting up a full-stack architecture using React, Bootstrap, Node.js (Express), and MongoDB, improving scalability and user experience.",
-      "Leading the development of GenAI-powered features, including adaptive question generation and intelligent feedback mechanisms.",
-      "Expanding functionality by integrating new features, refining UI/UX, and optimizing database performance while learning and applying full-stack best practices."
+      "Developing ClassWise, an AI-powered adaptive learning and revision tool that delivers tailored quizzes from lecture slides, notes, and videos with feedback to 100+ students across multiple courses reducing grading workload by 90%.",
+      "Designed and deployed a role-based full-stack platform (React, Node.js, MongoDB, Tailwind, Azure Blob Storage) with secure authentication and scalable content delivery.",
+      "Leading GenAI feature development - large-context management, memory storage & adaptive quiz/feedback generation.",
+"Prototyping voice-based interaction to promote more engaging, on-demand revision experiences with gamified elements like leaderboards to incentivize non-graded revision through friendly competition.",
     ],
     link: "https://sites.duke.edu/createcenter/"
   },
@@ -95,7 +95,7 @@ const timelineItems = [
       "Prototyped and tested an end-to-end multi-agent LLM system utilizing OpenAI’s Assistants API within a 10-person team, enabling autonomous web research, analysis, and deliverable generation (newsletters, reports, presentations). Generated 100+ first draft deliverables during the testing phase.",
       "Built and deployed a prototype (Streamlit + GenAI) utilizing Retrieval Augmented Generation (RAG), Chain of Thought Prompting, and PowerPoint XML for creating customizable and downloadable PowerPoint presentations, estimated to save 30% of consultant time in creating first drafts.",
       "Built a scalable topic modeling approach for advanced document analysis, which was adopted by 10+ teams internally.",
-      "Fine-tuned a model to generate SVG code for Process Flow Diagrams by retrieving and adapting similar diagrams from a repository, allowing quick customization based on user requirements."
+      "Fine-tuned LLM (with LoRA) to edit SVG code of semantically retrieved Visio process flow diagrams. Enabled natural language based customization across 1K+ flow diagrams in internal repository."
     ],
     link: ""
   },
