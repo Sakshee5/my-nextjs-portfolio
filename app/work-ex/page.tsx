@@ -54,9 +54,20 @@ export default function PortfolioTimeline() {
 
 const timelineItems = [
   {
+    title: "AI Innovator Intern",
+    subtitle: "Chewy, US : Full-time",
+    date: "June 2025 - Aug 2025",
+    details: [
+      "Building a storefront chatbot with React/TypeScript frontend & FastAPI backend, with function calling, semantic embeddings & user profiles to enhance product discovery with sub-second response times across 500k+ products catalog.",
+      "Operationalized insights from 8M+ user reviews, 400k+ Q&A entries and 1k+ articles to drive personalized product suggestions enabling conversational & informational follow-ups with focus on intent understanding & negation handling.",
+      "Built an evaluation dashboard with LLM-as-a-Judge & quantitative analysis pipeline to track search quality, engagement, UX metrics and business KPIs, establishing measurable benchmarks for AI-powered e-commerce optimization.",
+   ],
+    link: ""
+  },
+  {
     title: "ML Engineer",
     subtitle: "Fashivly, US : Part-time",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - May 2025",
     details: [
       "Collaborating with Fashivly, a fashion-tech company, to enhance their Look Builder feature by integrating accessory segmentation into the existing image processing pipeline.",
       "Designed and tested various workflows, ultimately selecting LangSAM (with fallback to SAM) for more robust accessory segmentation.",
