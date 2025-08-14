@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "./photos.module.css";
 
 export const metadata: Metadata = {
   title: "Photos",
@@ -43,12 +42,12 @@ export default function Photos() {
         <h2 className="text-xl font-semibold mb-4">🏆 Wins</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {winPhotos.map((photo, index) => (
-            <div key={index} className={`relative aspect-[4/3] w-full group overflow-hidden rounded-md bg-gray-100 ${styles.photoItemCustom}`}>
+            <div key={index} className="relative aspect-[4/3] w-full group overflow-hidden rounded-md bg-gray-100 portfolio-photo-item">
               <Image
                 src={photo.src}
                 alt={photo.caption}
                 fill
-                className={`object-cover transition-transform duration-300 group-hover:scale-105 ${styles.photoImageCustom}`}
+                className="object-cover transition-transform duration-300 group-hover:scale-105 portfolio-photo-image"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
@@ -71,13 +70,13 @@ export default function Photos() {
           {artPhotos.map((src, index) => (
             <div
               key={index}
-              className={`relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group ${styles.photoItemCustom}`}
+              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group portfolio-photo-item"
             >
               <Image
                 src={src}
                 alt={`Art ${index + 1}`}
                 fill
-                className={`object-cover transition-transform duration-300 group-hover:scale-105 ${styles.photoImageCustom}`}
+                className="object-cover transition-transform duration-300 group-hover:scale-105 portfolio-photo-image"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
@@ -93,13 +92,13 @@ export default function Photos() {
           {funPhotos.map((src, index) => (
             <div
               key={index}
-              className={`relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group ${styles.photoItemCustom}`}
+              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group portfolio-photo-item"
             >
               <Image
                 src={src}
                 alt={`Fun ${index + 1}`}
                 fill
-                className={`object-cover transition-transform duration-300 group-hover:scale-105 ${styles.photoImageCustom}`}
+                className="object-cover transition-transform duration-300 group-hover:scale-105 portfolio-photo-image"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />

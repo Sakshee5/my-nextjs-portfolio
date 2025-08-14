@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { metaData } from "../config";
-import "app/styles/theme.css";
 
 const navItems = {
   "/edu": { name: "Education" },

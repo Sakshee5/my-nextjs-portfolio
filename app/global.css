@@ -149,3 +149,27 @@ table {
 .title {
   text-wrap: balance;
 }
+
+/* Portfolio Photo Overrides - Must be at the end to override other styles */
+.portfolio-photo-item {
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4/3 !important;
+}
+
+.portfolio-photo-image {
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Override any global circular image styles */
+.portfolio-photo-item img,
+.portfolio-photo-image {
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
