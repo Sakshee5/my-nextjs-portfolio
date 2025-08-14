@@ -42,13 +42,14 @@ export default function Photos() {
         <h2 className="text-xl font-semibold mb-4">🏆 Wins</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {winPhotos.map((photo, index) => (
-            <div key={index} className="relative w-full h-64 group overflow-hidden rounded-md bg-gray-100">
+            <div key={index} className="relative aspect-[4/3] w-full group overflow-hidden rounded-md bg-gray-100">
               <Image
                 src={photo.src}
                 alt={photo.caption}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
               />
 
               {/* Hover Caption Overlay */}
@@ -69,7 +70,7 @@ export default function Photos() {
           {artPhotos.map((src, index) => (
             <div
               key={index}
-              className="relative w-full h-64 bg-gray-100 rounded-md shadow-sm overflow-hidden group"
+              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group"
             >
               <Image
                 src={src}
@@ -77,6 +78,7 @@ export default function Photos() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
               />
             </div>
           ))}
@@ -90,7 +92,7 @@ export default function Photos() {
           {funPhotos.map((src, index) => (
             <div
               key={index}
-              className="relative w-full h-64 bg-gray-100 rounded-md shadow-sm overflow-hidden group"
+              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group"
             >
               <Image
                 src={src}
@@ -98,6 +100,7 @@ export default function Photos() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
               />
             </div>
           ))}
