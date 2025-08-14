@@ -42,17 +42,18 @@ export default function Photos() {
         <h2 className="text-xl font-semibold mb-4">🏆 Wins</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {winPhotos.map((photo, index) => (
-            <div key={index} className="relative w-full h-64 group">
+            <div key={index} className="relative w-full h-64 group overflow-hidden rounded-md bg-gray-100">
               <Image
                 src={photo.src}
                 alt={photo.caption}
                 fill
-                className="object-contain rounded-md"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
 
               {/* Hover Caption Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-md">
-                <p className="text-white text-sm text-center font-medium px-2">
+              <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-sm text-center font-medium px-4 py-2 leading-relaxed">
                   {photo.caption}
                 </p>
               </div>
@@ -61,7 +62,6 @@ export default function Photos() {
         </div>
       </div>
 
-
       {/* Art Section */}
       <div>
         <h2 className="text-xl font-semibold mb-4">🎨 Art</h2>
@@ -69,13 +69,14 @@ export default function Photos() {
           {artPhotos.map((src, index) => (
             <div
               key={index}
-              className="relative w-full h-64 bg-gray-100 rounded-lg shadow-sm"
+              className="relative w-full h-64 bg-gray-100 rounded-md shadow-sm overflow-hidden group"
             >
               <Image
                 src={src}
                 alt={`Art ${index + 1}`}
                 fill
-                className="object-contain rounded-md"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
             </div>
           ))}
@@ -89,13 +90,14 @@ export default function Photos() {
           {funPhotos.map((src, index) => (
             <div
               key={index}
-              className="relative w-full h-64 bg-gray-100 rounded-lg shadow-sm"
+              className="relative w-full h-64 bg-gray-100 rounded-md shadow-sm overflow-hidden group"
             >
               <Image
                 src={src}
                 alt={`Fun ${index + 1}`}
                 fill
-                className="object-contain rounded-md"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
             </div>
           ))}
