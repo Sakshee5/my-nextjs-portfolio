@@ -103,6 +103,15 @@ export default function Page() {
                       className="object-contain"
                     />
                   </div>
+                  <div className="logo-item tooltip-container" data-tooltip="Tynker">
+                    <Image
+                      src="/assets/tynker.png"
+                      alt="Tynker"
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

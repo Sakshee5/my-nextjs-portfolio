@@ -58,6 +58,7 @@ const timelineItems = [
     subtitle: "Chewy, US : Full-time",
     date: "June 2025 - Aug 2025",
     details: [
+      "Led a 3-member team to win Chewy’s Unbound Competition, a program focused on advancing AI in e-commerce.",
       "Building a storefront chatbot with React/TypeScript frontend & FastAPI backend, with function calling, semantic embeddings & user profiles to enhance product discovery with sub-second response times across 500k+ products catalog.",
       "Operationalized insights from 8M+ user reviews, 400k+ Q&A entries and 1k+ articles to drive personalized product suggestions enabling conversational & informational follow-ups with focus on intent understanding & negation handling.",
       "Built an evaluation dashboard with LLM-as-a-Judge & quantitative analysis pipeline to track search quality, engagement, UX metrics and business KPIs, establishing measurable benchmarks for AI-powered e-commerce optimization.",
@@ -69,9 +70,9 @@ const timelineItems = [
     subtitle: "Fashivly, US : Part-time",
     date: "Jan 2025 - May 2025",
     details: [
-      "Collaborating with Fashivly, a fashion-tech company, to enhance their Look Builder feature by integrating accessory segmentation into the existing image processing pipeline.",
-      "Designed and tested various workflows, ultimately selecting LangSAM (with fallback to SAM) for more robust accessory segmentation.",
-      "Deployed a CPU version of LangSAM on Hugging Face Spaces, with plans to migrate to AWS EC2 for GPU acceleration.",
+      "Redesigned the image segmentation pipeline with Meta AI’s LangSAM model, expanding from apparel-only to also accessories, improving Dice score by ~25% and reducing manual edits by ~90%, boosting stylist workflow efficiency.",
+      "Evaluated on 91K+ fashion images with category precision up to 95%, and deployed inference endpoints to Hugging Face Spaces (CPU) for prototyping and AWS SageMaker (GPU) for scalable acceleration.",
+      "Collaborated directly with C-level leadership in a startup environment, influencing the product roadmap by identifying and addressing bottlenecks such as existing model latency, segmentation inaccuracies, and high manual editing effort.",
    ],
     link: ""
   },
