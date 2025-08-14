@@ -13,20 +13,17 @@ export default function Photos() {
     { src: "/photos/win1.jpg", caption: "Duke AI Hackathon Win" },
     { src: "/photos/win2.jpg", caption: "Won Chewy Unbound Competition - Team" },
     { src: "/photos/win3.jpg", caption: "Presenting at Chewy Unbound Competition" },
-    { src: "/photos/win3.jpg", caption: "Presenting at Responsible AI Symposium at Duke" },
+    { src: "/photos/win4.jpg", caption: "Presenting at Responsible AI Symposium at Duke" },
   ];
 
-  // Art section
   const artPhotos = [
     "/photos/art1.jpg",
     "/photos/art2.jpg",
     "/photos/art3.jpg",
     "/photos/art4.jpg",
     "/photos/art5.jpg",
-
   ];
 
-  // Fun section
   const funPhotos = [
     "/photos/fun1.jpg",
     "/photos/fun2.jpg",
@@ -43,35 +40,44 @@ export default function Photos() {
       {/* Win Section */}
       <div>
         <h2 className="text-xl font-semibold mb-4">🏆 Wins</h2>
-        <div className="photo-grid grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {winPhotos.map((photo, index) => (
-            <div key={index} className="photo-item">
+            <div key={index} className="relative w-full h-64 group">
               <Image
                 src={photo.src}
                 alt={photo.caption}
-                width={400}
-                height={400}
-                className="object-cover rounded-lg"
+                fill
+                className="object-contain rounded-md"
               />
-              <p className="mt-2 text-sm text-center">{photo.caption}</p>
+
+              {/* Hover Caption Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-md">
+                <p className="text-white text-sm text-center font-medium px-2">
+                  {photo.caption}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
+
       {/* Art Section */}
       <div>
         <h2 className="text-xl font-semibold mb-4">🎨 Art</h2>
-        <div className="photo-grid grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {artPhotos.map((src, index) => (
-            <Image
+            <div
               key={index}
-              src={src}
-              alt={`Art ${index + 1}`}
-              width={400}
-              height={400}
-              className="object-cover rounded-lg"
-            />
+              className="relative w-full h-64 bg-gray-100 rounded-lg shadow-sm"
+            >
+              <Image
+                src={src}
+                alt={`Art ${index + 1}`}
+                fill
+                className="object-contain rounded-md"
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -79,16 +85,19 @@ export default function Photos() {
       {/* Fun Section */}
       <div>
         <h2 className="text-xl font-semibold mb-4">🎉 Fun</h2>
-        <div className="photo-grid grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {funPhotos.map((src, index) => (
-            <Image
+            <div
               key={index}
-              src={src}
-              alt={`Fun ${index + 1}`}
-              width={400}
-              height={400}
-              className="object-cover rounded-lg"
-            />
+              className="relative w-full h-64 bg-gray-100 rounded-lg shadow-sm"
+            >
+              <Image
+                src={src}
+                alt={`Fun ${index + 1}`}
+                fill
+                className="object-contain rounded-md"
+              />
+            </div>
           ))}
         </div>
       </div>
