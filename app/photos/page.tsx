@@ -42,12 +42,12 @@ export default function Photos() {
         <h2 className="text-xl font-semibold mb-4">🏆 Wins</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {winPhotos.map((photo, index) => (
-            <div key={index} className="relative aspect-[4/3] w-full group overflow-hidden rounded-md bg-gray-100">
+            <div key={index} className="relative aspect-[4/3] w-full group overflow-hidden rounded-md bg-gray-100 photo-item-custom">
               <Image
                 src={photo.src}
                 alt={photo.caption}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 photo-image-custom"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
@@ -70,13 +70,13 @@ export default function Photos() {
           {artPhotos.map((src, index) => (
             <div
               key={index}
-              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group"
+              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group photo-item-custom"
             >
               <Image
                 src={src}
                 alt={`Art ${index + 1}`}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 photo-image-custom"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
@@ -92,13 +92,13 @@ export default function Photos() {
           {funPhotos.map((src, index) => (
             <div
               key={index}
-              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group"
+              className="relative aspect-[4/3] w-full bg-gray-100 rounded-md shadow-sm overflow-hidden group photo-item-custom"
             >
               <Image
                 src={src}
                 alt={`Fun ${index + 1}`}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 photo-image-custom"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'cover' }}
               />
@@ -106,6 +106,31 @@ export default function Photos() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .photo-item-custom {
+          border-radius: 8px !important;
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 4/3 !important;
+        }
+        
+        .photo-image-custom {
+          border-radius: 8px !important;
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+        
+        /* Override any global circular image styles */
+        .photo-item-custom img,
+        .photo-image-custom {
+          border-radius: 8px !important;
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+      `}</style>
     </section>
   );
 }
